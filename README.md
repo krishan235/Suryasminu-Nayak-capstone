@@ -77,7 +77,7 @@ It allows the user to perform Linux-like file operations programmatically using 
 ## 🖥 How to Run the Application
 
 ### 🔧 *Step 1: Compile*
-```bash
+
 g++ blooma1.cpp -o explorer
 ▶ Step 2: Execute
 Run the program:
