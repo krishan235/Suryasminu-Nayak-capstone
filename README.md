@@ -1,11 +1,5 @@
 # 🧭 File Explorer Application (Linux OS)
 
-![C++](https://img.shields.io/badge/Language-C%2B%2B-blue)
-![Platform](https://img.shields.io/badge/Platform-Linux-orange)
-![Status](https://img.shields.io/badge/Status-Completed-success)
-
----
-
 ## 📘 Objective
 The goal of this project is to *develop a console-based file explorer application in C++* that interacts with the *Linux Operating System* to manage files and directories.  
 The application performs essential file operations such as *listing, copying, moving, deleting, creating, searching, and managing file permissions* through a simple text-based interface.
@@ -51,7 +45,7 @@ It allows the user to perform Linux-like file operations programmatically using 
 ## ⚙ Features Implemented
 
 | Feature | Description |
-|----------|--------------|
+|----------|-------------|
 | *List Files* | Lists files and directories. |
 | *Copy File* | Copies a file to another location. |
 | *Move File* | Moves or renames a file. |
@@ -85,3 +79,101 @@ It allows the user to perform Linux-like file operations programmatically using 
 ### 🔧 *Step 1: Compile*
 ```bash
 g++ blooma1.cpp -o explorer
+▶ Step 2: Execute
+Run the program:
+
+bash
+Copy code
+./explorer
+💬 Step 3: Use Commands
+Example session:
+
+bash
+Copy code
+Available commands: list | copy | move | delete | create | search | perm | chmod | exit
+Enter command: list
+file1.txt
+Documents
+main.cpp
+
+Enter command: create
+Enter new file name: newfile.txt
+File created successfully!
+
+Enter command: search
+Enter file name or keyword to search: main
+Found: ./main.cpp
+
+Enter command: perm
+Enter file or path to view permissions: main.cpp
+-rw-r--r--  1024 bytes  main.cpp
+
+Enter command: chmod
+Enter file or path to change permissions: main.cpp
+Enter numeric mode (e.g. 644 or 0755): 755
+Permissions changed successfully.
+-rwxr-xr-x  1024 bytes  main.cpp
+🧠 Technical Concepts Used
+File I/O: ifstream, ofstream
+
+Directory Access: opendir(), readdir(), closedir()
+
+File Metadata: stat() structure to fetch file type, size, and permissions
+
+File Permission Handling: chmod() and symbolic representation (rwx)
+
+Recursive Search: Depth-first search for file name matching
+
+Error Handling: perror() and input validation
+
+C++ String and I/O Manipulation: string, setw, stoi, etc.
+
+🧰 Libraries Used
+cpp
+Copy code
+#include <iostream>
+#include <fstream>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <iomanip>
+#include <cstring>
+#include <string>
+📄 Example Output
+bash
+Copy code
+Available commands: list | copy | move | delete | create | search | perm | chmod | exit
+Enter command: list
+main.cpp
+notes.txt
+data/
+Enter command: copy
+Enter source file: notes.txt
+Enter destination file: backup_notes.txt
+File copied successfully!
+Enter command: exit
+Exiting File Explorer...
+🧰 System Requirements
+Operating System: Linux / Ubuntu / WSL
+
+Compiler: g++ (GNU Compiler Collection)
+
+Language Standard: C++11 or above
+
+🏁 Conclusion
+The File Explorer Application effectively simulates fundamental file management operations in a Linux environment.
+It demonstrates how C++ interacts with the underlying Linux file system using system calls and standard libraries to perform file handling and permission management operations efficiently.
+
+yaml
+Copy code
+
+---
+
+### 🧩 Summary:
+✅ Yes, paste this full content into your `README.md`  
+⚠️ Make sure the code blocks (```bash``` or ```cpp```) are **properly closed** with three backticks.  
+💡 After saving, push changes using:
+```bash
+git add README.md
+git commit -m "Updated full README with complete sections"
+git push
