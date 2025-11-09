@@ -74,23 +74,22 @@ It allows the user to perform Linux-like file operations programmatically using 
 
 ---
 
-## 🖥 How to Run the Application
-
-### 🔧 *Step 1: Compile*
-
+🖥 How to Run the Application
+🔧 Step 1: Compile
 g++ blooma1.cpp -o explorer
+
 ▶ Step 2: Execute
+
 Run the program:
 
-bash
-Copy code
 ./explorer
+
 💬 Step 3: Use Commands
+
 Example session:
 
-bash
-Copy code
 Available commands: list | copy | move | delete | create | search | perm | chmod | exit
+
 Enter command: list
 file1.txt
 Documents
@@ -113,7 +112,9 @@ Enter file or path to change permissions: main.cpp
 Enter numeric mode (e.g. 644 or 0755): 755
 Permissions changed successfully.
 -rwxr-xr-x  1024 bytes  main.cpp
+
 🧠 Technical Concepts Used
+
 File I/O: ifstream, ofstream
 
 Directory Access: opendir(), readdir(), closedir()
@@ -129,8 +130,6 @@ Error Handling: perror() and input validation
 C++ String and I/O Manipulation: string, setw, stoi, etc.
 
 🧰 Libraries Used
-cpp
-Copy code
 #include <iostream>
 #include <fstream>
 #include <dirent.h>
@@ -139,9 +138,8 @@ Copy code
 #include <iomanip>
 #include <cstring>
 #include <string>
+
 📄 Example Output
-bash
-Copy code
 Available commands: list | copy | move | delete | create | search | perm | chmod | exit
 Enter command: list
 main.cpp
@@ -153,7 +151,9 @@ Enter destination file: backup_notes.txt
 File copied successfully!
 Enter command: exit
 Exiting File Explorer...
+
 🧰 System Requirements
+
 Operating System: Linux / Ubuntu / WSL
 
 Compiler: g++ (GNU Compiler Collection)
@@ -161,11 +161,17 @@ Compiler: g++ (GNU Compiler Collection)
 Language Standard: C++11 or above
 
 🏁 Conclusion
+
 The File Explorer Application effectively simulates fundamental file management operations in a Linux environment.
 It demonstrates how C++ interacts with the underlying Linux file system using system calls and standard libraries to perform file handling and permission management operations efficiently.
 
-yaml
-Copy code
+✅ Final Step
+
+After you fix the formatting:
+
+git add README.md
+git commit -m "Fixed markdown formatting in README"
+git push
 
 ---
 
